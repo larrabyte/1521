@@ -18,9 +18,6 @@ void *add_5000_to_counter(void *data) {
 }
 
 int main(void) {
-    int err = pthread_mutex_init(&mutex, NULL);
-    assert(err == 0);
-
     pthread_t thread1;
     pthread_create(&thread1, NULL, add_5000_to_counter, NULL);
 
